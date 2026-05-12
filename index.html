@@ -16522,20 +16522,35 @@
         .logo-mobile { display: none !important; }
 
         @media (max-width: 810px) {
+            .framer-wdgnwj-container {
+                display: none !important;
+            }
+
             .framer-14zswo8 {
                 width: fit-content !important;
-                margin: 10px auto !important;
-                padding: 6px 16px !important;
-                gap: 12px !important;
+                margin: 0 auto !important;
+                padding: 6px 6px 6px 16px !important;
+                gap: 10px !important;
                 justify-content: center !important;
                 max-width: 90vw !important;
+                position: fixed !important;
+                top: 15px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                background-color: var(--token-df8212ce-a14f-4dee-9f47-049ef3d25bf5, rgb(243, 245, 238)) !important;
+                border-radius: 40px !important;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+                z-index: 99999 !important;
             }
+
             .logo-desktop { display: none !important; }
             .logo-mobile { display: inline !important; }
             
             .framer-1jvepew {
                 margin: 0 !important;
                 width: auto !important;
+                padding: 0 !important;
+                flex: none !important;
             }
             
             /* Ensure the CTA button container is properly aligned on mobile */
@@ -16544,6 +16559,13 @@
                 position: static !important;
                 margin: 0 !important;
                 width: auto !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+
+            .framer-ocnrkc-container a {
+                padding: 8px 14px !important;
+                border-radius: 30px !important;
             }
             
             .framer-1utckn7 p {
@@ -17302,6 +17324,9 @@
                         logoLink.style.setProperty('align-items', 'center', 'important');
                         logoLink.style.setProperty('position', 'relative', 'important');
                         logoLink.style.setProperty('top', '0', 'important');
+                        logoLink.style.setProperty('left', '0', 'important');
+                        logoLink.style.setProperty('margin', '0', 'important');
+                        logoLink.style.setProperty('padding', '0', 'important');
                         
                         // Use the same dark color as the navigation text
                         var textColor = 'var(--token-07de0f2e-151f-414f-81b7-d6f05f22f693, #1c2623)';
