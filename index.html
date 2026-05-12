@@ -16519,6 +16519,38 @@
             margin-right: 20px !important;
         }
 
+        .logo-mobile { display: none !important; }
+
+        @media (max-width: 810px) {
+            .framer-14zswo8 {
+                width: fit-content !important;
+                margin: 10px auto !important;
+                padding: 6px 16px !important;
+                gap: 12px !important;
+                justify-content: center !important;
+                max-width: 90vw !important;
+            }
+            .logo-desktop { display: none !important; }
+            .logo-mobile { display: inline !important; }
+            
+            .framer-1jvepew {
+                margin: 0 !important;
+                width: auto !important;
+            }
+            
+            /* Ensure the CTA button container is properly aligned on mobile */
+            .framer-ocnrkc-container {
+                display: flex !important;
+                position: static !important;
+                margin: 0 !important;
+                width: auto !important;
+            }
+            
+            .framer-1utckn7 p {
+                font-size: 13px !important;
+            }
+        }
+
         .framer-17p1tlb {
             flex: 1 1 auto !important;
             display: flex !important;
@@ -16598,7 +16630,7 @@
             'use strict';
 
             // ====== CONFIG ======
-            const WHATSAPP_LINK = 'https://wa.me/XXXXXXXXXXX?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20e-commerce.';
+            const WHATSAPP_LINK = 'https://wa.me/message/SGQCQZA5J56EE1';
 
             // ====== UTILITY FUNCTIONS ======
             function setText(el, text) {
@@ -17273,7 +17305,7 @@
                         
                         // Use the same dark color as the navigation text
                         var textColor = 'var(--token-07de0f2e-151f-414f-81b7-d6f05f22f693, #1c2623)';
-                        logoLink.innerHTML = '<span style="font-size: 18px; font-weight: 800; color: ' + textColor + '; font-family: \'Inter\', sans-serif; letter-spacing: -0.5px; white-space: nowrap; position: relative; z-index: 10;">Cosmic Digital Studio</span>';
+                        logoLink.innerHTML = '<span class="logo-desktop" style="font-size: 18px; font-weight: 800; color: ' + textColor + '; font-family: \'Inter\', sans-serif; letter-spacing: -0.5px; white-space: nowrap; position: relative; z-index: 10;">Cosmic Digital Studio</span><span class="logo-mobile" style="font-size: 18px; font-weight: 800; color: ' + textColor + '; font-family: \'Inter\', sans-serif; letter-spacing: -0.5px; white-space: nowrap; position: relative; z-index: 10;">CDS</span>';
                         
                         // Also fix the parent container and ensure it's in a flex row
                         var container = logoLink.closest('.framer-1jvepew');
@@ -17283,6 +17315,14 @@
                             container.style.setProperty('display', 'flex', 'important');
                             container.style.setProperty('align-items', 'center', 'important');
                         }
+
+                        // Force visibility and alignment of the CTA container (Lancer mon projet)
+                        document.querySelectorAll('.framer-ocnrkc-container').forEach(function(cta) {
+                            cta.style.setProperty('display', 'flex', 'important');
+                            cta.style.setProperty('opacity', '1', 'important');
+                            cta.style.setProperty('visibility', 'visible', 'important');
+                            cta.style.setProperty('position', 'static', 'important');
+                        });
 
                         var navWrapper = logoLink.closest('.framer-14zswo8');
                         if (navWrapper) {
